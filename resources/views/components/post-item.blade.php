@@ -19,8 +19,13 @@
                                </a>
                            </div>
                            <a href="#">
-                               <img class="rounded-2xl w-48 h-48 object-cover"
-                                   src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
+                               @if ($post->images)
+                                   <img class="rounded-2xl w-48 h-48 object-cover"
+                                       src="{{ Storage::url($post->images) }}" alt="" />
+                               @else
+                                   <img class="rounded-2xl w-48 h-48 object-cover"
+                                       src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="" />
+                               @endif
                            </a>
 
                        </div>
